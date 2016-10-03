@@ -5,14 +5,32 @@
 ## Installation
 
 ```sh
-$ npm install --save cordlr-cleverbot
+$ cordlr install cordlr-cleverbot
+```
+
+Then add it to your config.
+```json
+{
+  "plugins": [
+    "cordlr-cleverbot"
+  ],
+  "cleverbot": {
+    "scope": ["mention", "command"],
+    "mention": true,
+    "typing": true
+  }
+}
 ```
 
 ## Usage
+```
+cleverbot <message>
+```
 
-```js
-var cordlrCleverbot = require('cordlr-cleverbot');
-cordlrCleverbot();
+or it can be used via mention if it is enabled
+
+```
+@botname <message>
 ```
 
 ## License
