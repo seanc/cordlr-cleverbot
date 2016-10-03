@@ -1,0 +1,30 @@
+{
+  "name": "cordlr-cleverbot",
+  "description": "Cordlr cleverbot plugin",
+  "version": "0.1.0",
+  "homepage": "https://github.com/seanc/cordlr-cleverbot",
+  "author": "Sean Wilson (https://imsean.me)",
+  "repository": "seanc/cordlr-cleverbot",
+  "bugs": {
+    "url": "https://github.com/seanc/cordlr-cleverbot/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "cleverbot",
+    "cordlr"
+  ],
+  "dependencies": {
+    "cleverbot-node": "^0.2.2"
+  }
+}
