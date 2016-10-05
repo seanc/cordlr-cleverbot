@@ -2,7 +2,7 @@ const Cleverbot = require('cleverbot-node');
 const chat = new Cleverbot();
 
 function cleverbot(bot, config) {
-  if (config.cleverbot.scope.indexOf('mention') > -1) {
+  if (config.cleverbot.scope.includes('mention')) {
     bot.on('message', message => {
       if (message.mentions.users.find('id', bot.user.id)) {
         Cleverbot.prepare(() => {
@@ -20,7 +20,7 @@ function cleverbot(bot, config) {
   }
 
   return function run(message, args) {
-    if (!config.cleverbot.scope.indexOf('command') > -1) return;
+    if (!config.cleverbot.scope.includes('command')) return;
     if (args.length < 1) return;
     Cleverbot.prepare(() => {
       chat.write(args.join(' '), res => {
