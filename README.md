@@ -9,15 +9,15 @@ $ cordlr install cordlr-cleverbot
 ```
 
 Then add it to your config.
-```json
+```js
 {
   "plugins": [
     "cordlr-cleverbot"
   ],
   "cleverbot": {
-    "scope": ["mention", "command"],
-    "mention": true,
-    "typing": true
+    "scope": ["mention", "command"], // How should the bot be triggered, by command, message, or both
+    "mention": true, // Should the bot mention the user when replying back
+    "typing": true // Should the bot act as if it is typing a response
   }
 }
 ```
